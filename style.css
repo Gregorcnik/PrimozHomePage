@@ -1,0 +1,24 @@
+:root {
+  --lastUpdate: "26. 2. 2022"
+}
+.fakeimg {
+  height: 200px;
+  background: var(--bs-dark);
+}
+.glavno {
+  position: relative;
+}
+.opis {
+  word-break: break-word;
+}
+.center-center {
+  margin: auto;
+}
+.zadnjaPosodobitev::after {
+  content: var(--lastUpdate);
+}
+
+details p {
+  padding-left: 20px;
+  margin-top: 16px;
+}
