@@ -16,12 +16,22 @@
 }
 .zadnjaPosodobitev::after {
   content: var(--lastUpdate);
+  font-weight: bold;
 }
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
+.carousel-inner {
+    border-radius: 5px;
+}
 details p {
   padding-left: 20px;
   margin-top: 16px;
+}
+
+@media only screen and (max-width: 765px) {
+  .carousel-caption {
+    display: none;
+  }
 }
