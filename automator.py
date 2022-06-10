@@ -3,7 +3,7 @@ def oklepaj(string, tag, zamik, Class='', Id=''):
         Class = ' '+Class
     if not(Id==''):
         Id = ' '+Id
-    return f'{(zamik-1)*"  "}<{tag}{Class}{Id}>\n{zamik*"  "}{string}\n{(zamik-1)*"  "}</{tag}>'
+    return f'{(zamik-1)*"  "}<{tag}{Class}{Id}>{zamik*"  "}{string}{(zamik-1)*"  "}</{tag}>'
 
 f = open('indexTest.html', 'r')
 index=[];
@@ -19,13 +19,10 @@ f.close()
 
 dodatek=''
 for i in range(0, len(vsebina), 2):
-    dodatek+=oklepaj(oklepaj(vsebina[i], 'summary', 0)+'\n'+oklepaj(vsebina[i+1], 'p', 0), 'details', 0)+'\n'
-dodatek+='\n'
-
-print(dodatek)
+    dodatek+=oklepaj(oklepaj(vsebina[i], 'summary', 0)+oklepaj(vsebina[i+1], 'p', 0), 'details', 0)+'\n'
 
 dodajaj = index.index('<!-- dodajaj -->\n')
-index.insert(dodajaj, dodatek)
+index[dodajaj-1]=dodatek
 
 indexStr=''
 for i in range(0, len(index)):
