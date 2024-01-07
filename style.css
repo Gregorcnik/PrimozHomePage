@@ -1,5 +1,11 @@
 :root {
-  --lastUpdate: "long time ago";
+  --lastUpdate: "WIP";
+}
+a {
+  color: #0b3a80;
+}
+.nounderline {
+  text-decoration: none;
 }
 .fakeimg {
   height: 200px;
@@ -38,6 +44,19 @@ summary {
 }
 details[open] summary {
   border-bottom: 1px solid #c8c9ca;
+}
+
+.newsBox {
+  border: #CECECF solid 0.5px;
+  height: 300px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+.newsCard {
+  background-color: blanchedalmond;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 765px) {
