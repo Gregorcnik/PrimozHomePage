@@ -122,4 +122,44 @@
       </div>
     </div>
   </body>
+
+  <script>
+
+    function toggleClosed(element) {
+      if (element.getAttribute("closed") == "false") {
+        element.innerHTML = truncateTextContent(element.getAttribute("content"), newsLength) + "...";
+        element.setAttribute("closed", "true");
+      } else if (element.getAttribute("closed") == "true") {
+        // Restore the original content when reopening
+        element.innerHTML = element.getAttribute("content");
+        element.setAttribute("closed", "false");
+      }
+    }
+
+    // Function to truncate text content without breaking words
+    function truncateTextContent(text, maxLength) {
+      if (text.length <= maxLength) {
+        return text;
+      } else {
+        // Find the last space within the specified length
+        var lastSpaceIndex = text.lastIndexOf(" ", maxLength - 3);
+        
+        // Truncate the text content and close any open tags
+        var truncatedContent = text.slice(0, lastSpaceIndex);
+
+        return truncatedContent;
+      }
+    }
+
+    var newsCards = document.getElementsByClassName("newsCard");
+    var newsLength = 100;
+
+    for (var i = 0; i < newsCards.length; i++) {
+      newsCards[i].setAttribute("closed", "false");
+      newsCards[i].setAttribute("onclick", "toggleClosed(this);");
+      newsCards[i].setAttribute("content", newsCards[i].innerHTML);
+      toggleClosed(newsCards[i]);
+    }
+
+  </script>
 </html>

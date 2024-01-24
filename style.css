@@ -51,12 +51,14 @@ details[open] summary {
   height: 300px;
   overflow-y: scroll;
   padding: 10px;
+  resize: vertical;
 }
 .newsCard {
   background-color: blanchedalmond;
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 765px) {
