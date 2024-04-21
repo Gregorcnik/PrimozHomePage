@@ -76,7 +76,7 @@
           <hr>
           <div class="newsBox">
             <div class="newsCard">
-              <b>March 2024:</b> Calls are open for two PhD scholarships within the group for <a href="http://cimm.imfm.si//"> Computationally Intensive Mathematical Methods (CIMM)</a>. The positions are available at the <a href="http://www.imfm.si/javni-razpisi-in-javni-pozivi-1/public-call-to-tender-for-young-researchers-in-2024/">Institute of Mathematics, Physics and Mechanics (dealine, 15th April) and at <a href="https://www.uni-lj.si/study/young-researchers/">Faculaty of Mathematics and Physics, Univeristy of Ljubljana (deadline, 9th April).
+              <b>March 2024:</b> Calls are open for two PhD scholarships within the group for <a href="http://cimm.imfm.si//"> Computationally Intensive Mathematical Methods (CIMM)</a>. The positions are available at the <a href="http://www.imfm.si/javni-razpisi-in-javni-pozivi-1/public-call-to-tender-for-young-researchers-in-2024/">Institute of Mathematics, Physics and Mechanics (dealine, 15th April) and at <a href="https://www.uni-lj.si/study/young-researchers/">Faculaty of Mathematics and Physics, Univeristy of Ljubljana</a> (deadline, 9th April).
             </div>
             <div class="newsCard">
               <b>January 2024:</b> Some of us will attend the <a href="https://jschillewaert.wixsite.com/sodo2024">Symmetry of Discrete Objects conference</a>, that will take place in Auckland, New Zealand, between 12th and 16th of February this year.
@@ -141,10 +141,10 @@
         return text;
       } else {
         // Find the last space within the specified length
-        var lastSpaceIndex = text.lastIndexOf(" ", maxLength - 3);
+        let lastSpaceIndex = text.lastIndexOf(" ", maxLength - 3);
         
         // Truncate the text content and close any open tags
-        var truncatedContent = text.slice(0, lastSpaceIndex);
+        let truncatedContent = text.slice(0, lastSpaceIndex);
 
         return truncatedContent;
       }
