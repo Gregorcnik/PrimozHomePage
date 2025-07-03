@@ -1,6 +1,3 @@
-:root {
-  --lastUpdate: "5th of May, 2024";
-}
 a {
   color: #0b3a80;
 }
@@ -19,10 +16,6 @@ a {
 }
 .center-center {
   margin: auto;
-}
-.zadnjaPosodobitev::after {
-  content: var(--lastUpdate);
-  font-weight: bold;
 }
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.5);
